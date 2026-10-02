@@ -1,0 +1,359 @@
+/* =========================================
+   Global Reset and Base Styles
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================================
+   Shared Navigation Bar
+   ========================================= */
+.navbar {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* =========================================
+   Home Page Hero Section
+   ========================================= */
+.hero {
+    background-color: #e0f2f1;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.hero p {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   Main Layout and Grid
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.container > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* =========================================
+   Event Card Component
+   ========================================= */
+.event-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.category-badge {
+    background-color: #e8f5e9;
+    color: #27ae60;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.event-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.event-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   Progress Bar Component
+   ========================================= */
+.progress-section {
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.progress-bg {
+    background-color: #e9ecef;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: #27ae60;
+    height: 100%;
+    width: 0%; /* Dynamic width applied via JavaScript */
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.btn-view {
+    display: block;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-view:hover {
+    background-color: #1a252f;
+}
+
+.btn-primary {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #219150;
+}
+
+.btn-secondary {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    border: 1px solid #ced4da;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e6ea;
+}
+
+/* =========================================
+   Search Page Form
+   ========================================= */
+.search-form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    border: 1px solid #eaeaea;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.form-group input, .form-group select {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #27ae60;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    height: 42px;
+}
+
+.no-results {
+    text-align: center;
+    width: 100%;
+    color: #666;
+    padding: 20px;
+    grid-column: 1 / -1;
+}
+
+/* =========================================
+   Event Detail Page
+   ========================================= */
+#event-detail {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#event-detail h1 {
+    color: #2c3e50;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.event-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.event-description {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.detail-progress {
+    margin-bottom: 30px;
+}
+
+.ticket-info {
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.register-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    margin-top: 50px;
+}
+
+/* =========================================
+   Responsive Design for Small Screens
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-actions {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
