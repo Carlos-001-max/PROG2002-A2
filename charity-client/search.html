@@ -7,38 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Same navigation bar as home page -->
+    <!-- Shared navigation bar -->
     <nav class="navbar">
-        <div class="brand">CharityHub</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="search.html" class="active">Search Events</a>
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">&#9829;</span>
+                CharityHub
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="search.html" class="active">Search Events</a>
+            </div>
         </div>
     </nav>
 
     <main class="container">
-        <h2>Find a Charity Event</h2>
-        
+        <div class="page-intro">
+            <h2>Find a Charity Event</h2>
+            <p>Filter events by date, location, or category to discover your next cause</p>
+        </div>
+
         <!-- Search form with three filter criteria -->
         <form id="search-form" class="search-form">
             <div class="form-group">
-                <label for="date">Date:</label>
+                <label for="date">Date</label>
                 <input type="date" id="date">
             </div>
-            
+
             <div class="form-group">
-                <label for="location">Location:</label>
+                <label for="location">Location</label>
                 <input type="text" id="location" placeholder="e.g. City Park">
             </div>
-            
+
             <div class="form-group">
-                <label for="category">Category:</label>
+                <label for="category">Category</label>
                 <select id="category">
                     <option value="">All Categories</option>
                     <!-- Options will be loaded dynamically from the API -->
                 </select>
             </div>
-            
+
             <div class="form-actions">
                 <button type="submit" class="btn-primary">Search</button>
                 <button type="button" id="clear-btn" class="btn-secondary">Clear Filters</button>
@@ -50,7 +58,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Charity Events Hub. All rights reserved.</p>
+        <p>CharityHub &copy; 2026 &middot; Made with <span class="footer-heart">&#9829;</span> for our community</p>
     </footer>
 
     <script src="search.js"></script>
