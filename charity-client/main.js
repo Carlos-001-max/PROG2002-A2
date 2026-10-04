@@ -1,13 +1,13 @@
 // Per-event image map (event_id -> local photo)
 const EVENT_IMAGES = {
-    1: 'images/2.png',   // Hope Fun Run - starting line
-    2: 'images/4.jpg',   // Green Earth Gala - ballroom
-    3: 'images/7.jpg',   // Art for Hope Auction - auction room
-    4: 'images/5.jpg',   // Earth Songs Concert - concert stage
-    5: 'images/6.png',   // Hope Annual Gala - dinner group
-    6: 'images/9.jpg',   // Nature Walk - forest trail
-    7: 'images/1.png',   // Children First Run - family run
-    8: 'images/8.jpg'    // Charity Art Auction - auction hall
+    1: 'images/funrun.png',   // Hope Fun Run - starting line
+    2: 'images/gala.jpg',   // Green Earth Gala - ballroom
+    3: 'images/auction.jpg',   // Art for Hope Auction - auction room
+    4: 'images/concert.jpg',   // Earth Songs Concert - concert stage
+    5: 'images/dinner.png',   // Hope Annual Gala - dinner group
+    6: 'images/nature.jpg',   // Nature Walk - forest trail
+    7: 'images/kidsrun.png',   // Children First Run - family run
+    8: 'images/artauction.jpg'    // Charity Art Auction - auction hall
 };
 
 const CATEGORY_CLASSES = {
@@ -20,7 +20,7 @@ const CATEGORY_CLASSES = {
 const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 function eventImage(eventId) {
-    return EVENT_IMAGES[eventId] || 'images/2.png';
+    return EVENT_IMAGES[eventId] || 'images/funrun.png';
 }
 
 function categoryClass(categoryId) {
