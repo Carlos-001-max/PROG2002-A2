@@ -1,13 +1,13 @@
 {
   "name": "charity-api",
   "version": "1.0.0",
-  "main": "event_db.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gao Chengyu",
   "license": "ISC",
   "description": "",
   "dependencies": {
